@@ -1,0 +1,35 @@
+body{
+    padding: auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(177, 255, 33);
+    background-color: rgb(88, 177, 255);
+    text-align: center;
+}
+
+ul{
+    top: auto;
+    left: 11%;
+    width: 70%;
+    position: absolute;
+}
+
+.navbar{
+    text-align: center;
+}
+
+li{
+    background:rgba(34, 255, 0, 0.76);
+    margin: auto;
+    padding: 5%;
+    border-right-width: 10px;
+    border-right-style: dotted ;
+    border-style: dashed;
+    
+}
+
+@media screen and (min-width:1000px) {
+    body{
+        background-color: rgba(216, 74, 255, 0.762);
+    }
+    
+}
