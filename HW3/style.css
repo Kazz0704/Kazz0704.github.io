@@ -1,0 +1,70 @@
+body{
+    background-color: rgba(245, 255, 103, 0.676);
+    margin: 0% 10%;
+    text-align: right;
+}
+
+.float{
+    float: left;
+}
+
+
+.input1{
+    width: 80%;
+    border-radius: 10px;
+    border-style:dashed;
+}
+.input2{
+    width: 20%;
+    border-radius: 10px;
+    border-style:dashed;
+    margin-right: 30%;
+}
+
+.input3{
+    width: 20%;
+    border-radius: 10px;
+    border-style:dashed;
+    margin-left: 5%;
+}
+
+.input4{
+    width: 80%;
+    border-radius: 10px;
+    border-style:dashed;
+}
+
+img{
+    width: 80%;
+    vertical-align: text-top;
+    border-radius: 80px;
+}
+
+textarea{
+    vertical-align: text-top;
+    width: 80%;
+    border-radius: 10px;
+}
+
+div{
+    margin-bottom: 2%;
+}
+
+@media print{
+    body{
+        background-color: white;
+    }
+    label{
+        color: yellow;
+    }
+}
+
+@media screen and (max-width:900px){
+    body{
+        background-color: rgb(161, 61, 255);
+    }
+}
+
+h1{
+    text-align: center;
+}
