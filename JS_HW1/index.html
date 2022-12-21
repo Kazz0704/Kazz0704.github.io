@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_HW1</title>
+</head>
+<body>
+    <a href="/exercise1.html">exercise1</a>
+    <br>
+    <a href="/exercise2.html">exercise2</a>
+    <script>
+        var rand = Math.floor((Math.random()*10)+1);
+        input = window.prompt("Please input a number to guess the corret number")
+        while(input != rand){
+            input = window.prompt("Please input a number to guess the corret number")
+        }
+    </script>
+</body>
+</html>
