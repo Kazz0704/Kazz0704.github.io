@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <h2>Calculator</h2>
+    <form>
+        <div class="input">
+            <input type="text" id="num1" name="" required="">
+            <label>Number1</label>
+        </div>
+
+        <div class="input">
+            <input type="text" id="num2" name="" required="">
+            <label>Number2</label>
+        </div>
+
+        <div class="input">
+            <label>Operator: </label>
+            <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            </select>
+        </div>
+
+        <button type="button" id="calculate" class="blueText">Calculate</button>
+        <h1 id="result" class="blueText">Result:</h1>
+        <h1 id="ans" class="blueText"></h1>
+    </form>
+    <a href="credit.html">credit.html</a>
+    <br>
+    <a href="exercise.html">exercise.html</a>
+
+    <script>
+    // 定義計算函數
+    function calculate() {
+
+    // 使用 getElementById() 函數獲取輸入的數字和運算符號
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+    var operator = document.getElementById("operator").value;
+    var ans = 0;
+
+    // 根據選擇的運算符號進行不同的計算
+    if (operator == "+") {
+        ans = parseInt(num1) + parseInt(num2);
+    } 
+
+    else if (operator == "-") {
+        ans = num1 - num2;
+    } 
+
+    else if (operator == "*") {
+        ans = num1 * num2;
+    } 
+
+    else if (operator == "/") {
+        ans = (num1 / num2).toFixed(2);
+    }
+
+    // 顯示結果
+    document.getElementById("result").style.display = "";
+    document.getElementById("ans").innerHTML = ans;
+    }
+
+    // 當網頁載入時為計算按鈕添加點擊事件
+    window.addEventListener("load", function () {
+        document.getElementById("calculate").addEventListener("click", calculate);
+        document.getElementById("result").style.display = "none";
+    });
+
+    </script>
+</body>

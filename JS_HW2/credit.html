@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>credit</title>
+</head>
+<body>
+    <a href="index.html">index.html</a>
+    <br>
+    <a href="exercise.html">exercise.html</a>
+    <br>
+
+    <script>
+        // Get the sentence from the user
+        var sentence = prompt("Please enter a sentence:");
+
+        // Get the character from the user
+        var char = prompt("Please enter a character:");
+
+        // Find the first occurrence of the character in the sentence
+        var firstIndex = sentence.indexOf(char);
+
+        // Find the last occurrence of the character in the sentence
+        var lastIndex = sentence.lastIndexOf(char);
+
+        // Find the third occurrence of the character in the sentence
+        var thirdIndex = sentence.indexOf(char, 2);
+
+        // Print the results
+        document.write("The first occurrence of " + char + " is at index " + firstIndex + "<br>");
+        document.write("The last occurrence of " + char + " is at index " + lastIndex + "<br>");
+        document.write("The third occurrence of " + char + " is at index " + thirdIndex + "<br>");
+    </script>
+</body>
+</html>
