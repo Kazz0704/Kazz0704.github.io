@@ -5,51 +5,6 @@
     </head>
 
     <body>
-        <script>
-            var dies = [];
-            var times = ["none",0,0,0,0,0,0];
-            var total=0;
-            window.addEventListener("load", start);
-
-            function start(){
-                var button = document.getElementById("roll");
-                button.addEventListener("click", rollDice);
-
-                for (let index = 1; index <= 12; index++){
-                    var img = document.createElement("img");
-                    img.id="die"+index;
-                    img.src = "die"+1+".png";
-                    dies.push(img);
-                    document.getElementById("mid").appendChild(img);
-                }
-            }
-
-            function rollDice(){
-                dies.forEach(d => {
-                    setImg(d);
-                });
-                update();
-            }
-
-            function setImg(img){
-                var num = Math.floor(1+Math.random()*6);
-
-                img.setAttribute("src", "die"+num+".png");
-                times[num]+=1;
-                total+=1;
-            }
-
-            function update(){
-                for (let index = 1; index < times.length; index++) {
-                    var time = times[index];
-                    var percent = time/total;
-
-                    document.getElementById('freq'+index).innerHTML = time;
-                    document.getElementById('percent'+index).innerHTML = percent.toFixed(2);
-                }
-            }
-        </script>
-
         <div id="top">
             <form>
                 <input id="roll" type="button" class="button" value="Roll Dice">
@@ -104,6 +59,53 @@
 
             </table>
         </div>
+
+        <script>
+
+            window.addEventListener("load", start);
+            var dies = [];
+            var total=0;
+            var times = ["none",0,0,0,0,0,0];
+
+            function update(){
+                for (let index = 1; index < times.length; index++) {
+                    var time = times[index];
+                    var percent = time/total;
+
+                    document.getElementById('freq'+index).innerHTML = time;
+                    document.getElementById('percent'+index).innerHTML = percent.toFixed(2);
+                }
+            }
+
+            function rollDice(){
+                dies.forEach(d => {
+                    setImg(d);
+                });
+                update();
+            }
+
+            function start(){
+                var button = document.getElementById("roll");
+                button.addEventListener("click", rollDice);
+
+                for (let index = 1; index <= 12; index++){
+                    var img = document.createElement("img");
+                    img.id="die"+index;
+                    img.src = "die"+1+".png";
+                    dies.push(img);
+                    document.getElementById("mid").appendChild(img);
+                }
+            }
+
+            function setImg(img){
+                var num = Math.floor(1+Math.random()*6);
+
+                img.setAttribute("src", "die"+num+".png");
+                times[num]+=1;
+                total+=1;
+            }
+
+        </script>
 
     </body>
 </html>
